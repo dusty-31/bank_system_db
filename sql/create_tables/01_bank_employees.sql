@@ -38,7 +38,7 @@ CREATE TABLE Bank_System.employee_detail
 );
 
 ALTER TABLE Bank_System.branch
-    ADD COLUMN manager_id INT NOT NULL,
+    ADD COLUMN manager_id INT,
     ADD CONSTRAINT manager_id
         FOREIGN KEY (manager_id) REFERENCES Bank_System.employee (employee_id);
 

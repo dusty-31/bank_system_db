@@ -27,16 +27,6 @@ CREATE TABLE Bank_System.employee
 
 );
 
-CREATE TABLE Bank_System.employee_detail
-(
-    employee_detail_id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
-    address            VARCHAR(50)                    NOT NULL,
-    phone_number       VARCHAR(13)                    NOT NULL,
-
-    employee_id        INT UNIQUE                     NOT NULL,
-    FOREIGN KEY (employee_id) REFERENCES Bank_System.employee (employee_id)
-);
-
 ALTER TABLE Bank_System.branch
     ADD COLUMN manager_id INT,
     ADD CONSTRAINT manager_id

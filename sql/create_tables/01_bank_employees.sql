@@ -9,6 +9,16 @@ CREATE TABLE Bank_System.branch
     code      VARCHAR(10)                    NOT NULL UNIQUE
 );
 
+CREATE TABLE Bank_System.cash_desk
+(
+    cash_desk_id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    number       VARCHAR(7) UNIQUE              NOT NULL,
+    balance      DECIMAL(10, 2)                 NOT NULL,
+
+    branch_id    INT                            NOT NULL,
+    FOREIGN KEY (branch_id) REFERENCES Bank_System.branch (branch_id)
+);
+
 CREATE TABLE Bank_System.employee_type
 (
     employee_type_id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,

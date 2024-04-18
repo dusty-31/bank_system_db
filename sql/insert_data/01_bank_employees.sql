@@ -32,3 +32,4 @@ WHERE branch_id = 2;
 UPDATE Bank_System.branch
 SET manager_id = 7
 WHERE branch_id = 3;
+
